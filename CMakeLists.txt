@@ -44,7 +44,4 @@ add_library(ELLC-helpers src/DepthPropagation.cpp
 add_executable(ELLC src/main.cpp)
 
 
-target_link_libraries(ELLC ${OpenCV_LIBS}
-							boost_system 
-							boost_thread
-                           ELLC-helpers)
+target_link_libraries(ELLC ELLC-helpers ${OpenCV_LIBS} boost_system boost_thread)
